@@ -1,0 +1,83 @@
+
+/* --- BOTÃO ANIMATION --- */
+
+#lin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+}
+
+#lin > li > a{
+    position: relative;
+    background: #000000;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5;
+}
+
+#lin > li > a:hover{
+    letter-spacing: 0.25em;
+    background: var(--color);
+    color: var(--color);
+    box-shadow: 0 0 35px var(--color);
+}
+
+#lin > li > a::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #ffffff;
+}
+
+#lin > li > a span{
+    position: relative;
+    z-index: 1;
+}
+
+#lin > li > a i{
+    position: absolute;
+    inset: 0px;
+    display: block;
+}
+
+#lin > li > a i::before{
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--color);
+    background: #000000;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+#lin > li > a:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+
+#lin > li > a i::after{
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--color);
+    background: #000000;
+    transition: 0.5s;
+}
+#lin > li > a:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+
+

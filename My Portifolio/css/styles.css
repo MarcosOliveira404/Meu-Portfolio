@@ -1,0 +1,278 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+:root{
+    --colorBase: #0b0b0b;
+    --colorBase02: #d1d1d1;
+    --colorLink01: #2dd21d;
+    --colorLink02: #198bc4;
+    --Font: Global;
+    --FontItalic: Global-Italic;
+} 
+
+
+
+
+@font-face {
+    font-family: Global;
+    /*    truetype -> ttf            opentype -> otf    */
+    src: url('../font/Terminus.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Global-Italic;
+    /*    truetype -> ttf            opentype -> otf    */
+    src: url('../font/Terminus-Italic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+header {
+    background-color: var(--colorBase);
+    color: white;
+    padding: 15px 0;
+}
+
+h2{
+    font-family: var(--Font);
+    font-size: 2.5em;
+    padding-bottom: 25px;
+}
+
+
+
+/*  --- SOBRE MIN ---  */
+
+header > nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;  
+}
+
+header > nav > div > img {
+    max-width: 100%;
+    /*height: auto;*/
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+
+
+
+
+/*  --- CABEÇALHO ---  */
+nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav > ul > li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav > ul > li > a:hover{
+    color: var(--colorLink02) ;
+}
+
+
+
+
+
+
+
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre-container > .sobre-text > h1 > span{
+    color: var(--colorLink02);
+    font-family: var(--Font);
+}
+
+.sobre-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sobre-container > img {
+    max-width: 100%;
+    /*height: auto;*/
+    height: 350px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.sobre-container > .sobre-text {
+    max-width: 600px;
+}
+
+
+.sobre-text > h1{
+    font-size: 2em;
+    font-family: var(--Font);
+}
+
+.sobre-text > p{
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.sobre-text > p > span{
+    font-weight: bolder;
+}
+
+.sobre-text > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.sobre-text> ul > li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.sobre-text > ul > li > a {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sobre-text > ul > li > a:hover{
+    background-color: var(--colorBase);
+    border-radius: 10px;
+    color: var(--colorLink);
+}
+
+
+
+/*  --- AREA DE PROJETOS ---  */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    background-color: var(--colorBase02);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project > img {
+    padding-bottom: 5px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.project-infor {
+    text-align: left;
+}
+
+.project-infor > h3 {
+    margin-top: 0;
+}
+
+.project-infor > p {
+    padding: 10px;
+}
+
+.project-infor > button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--colorBase);
+    color: white;
+    cursor: pointer;
+}
+
+.project-infor > button > a{
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.project-infor > button > a.col01:hover{
+    color: var(--colorLink01);
+}
+.project-infor > button > a.col02:hover{
+    color: var(--colorLink02);
+}
+
+
+
+
+
+/*  --- LINGUAGENS ---  */
+.programmers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.programmers-item {
+    background-color: var(--colorBase02);
+    margin: 20px 5px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.programmers-item > p{
+    text-align: justify;
+}
+
+
+/*  --- RODAPE ---  */
+
+footer {
+    background-color: var(--colorBase);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer > p > a{
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+footer > p > a:hover{
+    color: var(--colorLink01);
+    text-decoration: underline;
+}

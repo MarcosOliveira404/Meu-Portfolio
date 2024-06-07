@@ -1,0 +1,54 @@
+@charset "utf-8 ";
+
+/*  --- Media-Query ---  */
+
+/* 
+    Typical device breakpoints
+    Pequenas telas: 600px
+    Celular: 600px até 768px
+    Tablet: 768px até  992px
+    Desktop: 992px até 1200px
+    Grandes telas: acima de 1200px
+*/
+
+@media print {
+    html{
+        font-size: 1.4em;
+    }
+    header{
+        display: none;
+    }
+    ul#lin{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .project{
+        width: 35%;
+    }
+    .programmers-item {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .project{
+        width: 35%;
+    }
+    .programmers-item {
+        width: 30%;
+    }
+}
+
+
+
+
+
+
+
+
