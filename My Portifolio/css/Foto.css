@@ -1,0 +1,27 @@
+
+.float-element{
+    max-width: 100%;
+    /*height: auto;*/
+    height: 350px;
+    margin: 20px;
+    background-color: #00afaf;
+    color: white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float{
+    0%, 100%{
+        transform: translate(0.5%, -0.5%) translateY(0);
+    }
+    50%{
+        transform: translate(-0.5%, -0.5%) translateY(-20px);
+    }
+}
+
+
