@@ -23,6 +23,24 @@
     }
 }
 
+@media screen and (min-width: 400px) and (max-width: 768px) {
+    .sobre-text > h1 {
+        font-size: 1.6em;
+    }
+
+    #lin {
+        gap: 15px;
+    }
+
+    .project{
+        width: 85%;
+    }
+
+    .programmers-item{
+        width: 85%;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
 
 }

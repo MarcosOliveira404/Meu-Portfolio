@@ -4,6 +4,18 @@
     margin: 0px;
 }
 
+#rocket {
+    position: fixed;
+    width: 80px; /* Ajuste conforme necessário */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    pointer-events: none; /* Não interfere na navegação */
+}
+
+
+
 
 :root{
     --colorBase: #0b0b0b;
@@ -235,6 +247,21 @@ section {
 
 
 
+.project {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.project.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
 
 
 /*  --- LINGUAGENS ---  */
@@ -255,6 +282,17 @@ section {
 
 .programmers-item > p{
     text-align: justify;
+}
+
+.programmers-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.programmers-item.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
