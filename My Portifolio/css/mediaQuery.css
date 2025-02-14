@@ -23,7 +23,10 @@
     }
 }
 
-@media screen and (min-width: 400px) and (max-width: 768px) {
+@media screen and (min-width:   370px) and (max-width: 768px) {
+    header{
+        width: 105%;
+    }
     .sobre-text > h1 {
         font-size: 1.6em;
     }
