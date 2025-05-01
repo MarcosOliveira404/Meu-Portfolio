@@ -22,6 +22,7 @@
     --colorBase02: #d1d1d1;
     --colorLink01: #2dd21d;
     --colorLink02: #198bc4;
+    --colorLink03: #ff0000;
     --Font: Global;
     --FontItalic: Global-Italic;
 } 
@@ -244,7 +245,9 @@ section {
 .project-infor > button > a.col02:hover{
     color: var(--colorLink02);
 }
-
+.project-infor > button > a.col03:hover{
+    color: var(--colorLink03);
+}
 
 
 .project {
