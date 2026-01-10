@@ -1,193 +1,281 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/buttonAnimation.css">
-    <link rel="stylesheet" href="css/mediaQuery.css">
-    <link rel="stylesheet" href="css/Foto.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio — Marcos Oliveira</title>
+  <link rel="stylesheet" href="css/styles2.css" />
 </head>
+
 <body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
 
-    <img src="img/foguete.png" alt="Foguete" id="rocket">
+  <!-- Foguete (decorativo e animado via JS) -->
+  <img src="img/foguete.png" id="rocket" alt="" aria-hidden="true">
 
-    <header>
-        <nav>
-            <div>
-                <img src="img/Log.jpg" alt="Logo" id="logo">
-            </div>
-            <ul>
-                <li><a href="./Dowloads/Curriculo.pdf" download="./Dowloads/Curriculo.pdf" type="aplication/pdf" target="_blank">
-                    Curriculo
-                </a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <div class="brand">
+        <img src="img/Log.jpg" alt="Logo Marcos" id="logo">
+      </div>
 
-    <section id="sobre">
-        <div class="sobre-container">
+      <ul class="nav-list">
+        <li><a href="./Dowloads/Curriculo.pdf" download target="_blank" rel="noopener">Currículo</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <img class="float-element" src="img/EuMarcos.jpg" alt="My Photo">
+  <main id="main">
+    <!-- HERO / SOBRE -->
+    <section id="sobre" class="container section-hero">
+      <div class="about-grid">
+        <figure class="photo-wrap">
+          <img src="img/FotoPerfio.jpg" alt="Marcos Oliveira" class="float-element">
+        </figure>
 
-            <div class="sobre-text">
-                <h1>Desenvolvedor <span>Full-Stack</span></h1>
-                <p>
-                    Prazer, meu nome é Marcos, atualmente estudando <span>NodeJS</span> e <span>React</span>, buscando me aperfeiçoando no <span>JavaScript</span>. Tenho plano de começar na área de <span>Penetration Test</span> para oferecer meus serviços e também melhorar a segurança de meus sistemas, adoro estudar outras culturas e o mundo automotivo.
-                </p>
-                <ul id="lin">
-                    <li>
-                        <a href="https://www.linkedin.com/in/marcos-oliveira-9a409925a/" style="--color: #2dd21d;" target="_blank"><span>Linkedin</span><i></i></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/MarcosOliveira404" style="--color: #198bc4;" target="_blank"><span>GitHub</span><i></i></a>
-                    </li>
-                </ul>
-            </div>
+        <div class="about-text">
+          <h1>Marcos <span>Oliveira</span></h1>
+          <p>
+            Desenvolvedor <strong>Full-Stack</strong> focado em <strong>NodeJS</strong> e <strong>React</strong>.
+            Buscando aperfeiçoamento contínuo em <strong>JavaScript</strong> e com interesse em <strong>Penetration
+              Test</strong> para melhorar a segurança de sistemas. Também apaixonado por cultura e universo automotivo.
+          </p>
+
+          <ul id="lin" class="links-social" aria-label="Redes sociais">
+            <li>
+              <a href="https://www.linkedin.com/in/marcos-oliveira-9a409925a/" style="--color: var(--accent-1);"
+                target="_blank" rel="noopener">
+                <span>LinkedIn</span><i aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/MarcosOliveira404" style="--color: var(--accent-2);" target="_blank"
+                rel="noopener">
+                <span>GitHub</span><i aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </section>
 
-    <section id="projects">
-        <h2>Projetos</h2>
-        <div class="projects-container">
-            <div class="project">
-                <img src="img/01_Projeto.png" alt="Projeto 1">
-                <div class="project-infor">
-                    <h3>Gerenciamento de Contas</h3>
-                    <p>
-                         Projeto pensado no gerenciamento de Gmail e Senhas, com uma temática Game. Nesse site, você pode criar um usuário, atualizar, deletar e selecionar todos os que fizeram login. O sistema foi desenvolvido em PHP, porém esse código não está disponível no projeto. Criado nas seguintes linguagens HTML, CSS E PHP.
-                    </p>
-                    <button><a href="https://github.com/MarcosOliveira404/CRUD" class="col01" target="_blank"> &#60;/Codigo&#62; </a></button>
-                    <button><a href="https://marcosoliveira404.github.io/CRUD/CRUD/Paginas/index.html" class="col02" target="_blank">Projeto</a></button>
-                </div>
+    <!-- PROJETOS -->
+    <section id="projects" class="container section-projects">
+      <h2>Projetos</h2>
+      <div class="projects-grid">
+
+
+        <article class="project">
+          <div class="project-slideshow">
+            <img src="img/01_Projeto_1.PNG" alt="Tela 1 - Gerenciamento de Contas" class="active">
+            <img src="img/01_Projeto_2.PNG">
+            <img src="img/01_Projeto_3.PNG">
+            <img src="img/01_Projeto_4.PNG">   
+            <img src="img/01_Projeto_5.PNG">
+            <img src="img/01_Projeto_6.PNG">
+          </div>
+          <div class="project-info">
+            <h3>Gerenciamento de Contas</h3>
+            <p>
+               Projeto pensado no gerenciamento de Gmail e Senhas, com uma temática Game. Nesse site, você pode criar um
+              usuário, atualizar, deletar e selecionar todos os que fizeram login. O sistema foi desenvolvido em PHP,
+              porém esse código não está disponível no projeto. Criado nas seguintes linguagens HTML, CSS E PHP.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/MarcosOliveira404/CRUD" class="btn btn-code" target="_blank" rel="noopener">
+                &lt;/Código&gt; </a>
+              <a href="https://marcosoliveira404.github.io/CRUD/CRUD/Paginas/index.html" class="btn btn-live"
+                target="_blank" rel="noopener">Projeto</a>
             </div>
-            <div class="project">
-                <img src="img/02_Projeto.png" alt="Projeto 2">
-                <div class="project-infor">
-                    <h3>Site Informativo</h3>
-                    <p> Esta página contará um pouco da história de uma das maiores lendas do mundo automotivo. Desenvolvida em HTML, CSS e JS. </p>
-                    <button><a href="https://github.com/MarcosOliveira404/Smokey_Nagata" class="col01" target="_blank"> &#60;/Codigo&#62; </a></button>
-                    <button><a href="https://marcosoliveira404.github.io/Smokey_Nagata/index.html" class="col02" target="_blank">Projeto</a></button>
-                </div>
+          </div>
+        </article>
+
+
+
+
+
+
+
+
+        <article class="project">
+          <div class="project-slideshow">
+            <img src="img/02_Projeto_1.PNG" alt="Tela 1 - Gerenciamento de Contas" class="active">
+          </div>
+          <div class="project-info">
+            <h3>The history</h3>
+            <p>
+              Projeto em React.js focado em apresentar conteúdos educativos de forma interativa e acessível, 
+              reunindo informações sobre eventos históricos, culturas, figuras históricas e curiosidades para 
+              facilitar a compreensão da evolução da humanidade.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/MarcosOliveira404/TheHistory" class="btn btn-code" target="_blank" rel="noopener">
+                &lt;/Código&gt; </a>
             </div>
-            <div class="project">
-                <img src="img/03_Projeto.PNG" alt="Projeto 3">
-                <div class="project-infor">
-                    <h3>Site Historico </h3>
-                    <p>O tema abordado foi "Os Vikings", um conteúdo rico em detalhes, contos, guerras e figuras importantes. Nosso site busca dividir os conteúdos em tópicos para facilitar o consumo da informação. </p>
-                    <button><a href="https://github.com/MarcosOliveira404/Vikings" class="col01" target="_blank"> &#60;/Codigo&#62; </a></button>
-                </div>
+          </div>
+        </article>
+
+
+
+
+
+
+
+        <article class="project">
+          <div class="project-slideshow">
+            <img src="img/03_Projeto_1.PNG" alt="Tela 1 - Gerenciamento de Contas" class="active">
+            <img src="img/03_Projeto_2.PNG">
+          </div>
+          <div class="project-info">
+            <h3>Ilhabela Blog</h3>
+            <p>
+              O Ilhabela Blog é um espaço dedicado a compartilhar notícias, eventos, atrações e tudo o 
+              que acontece em Ilhabela. Aqui você encontra informações atualizadas sobre praias, trilhas, 
+              cultura, turismo e o dia a dia da ilha, reunindo conteúdos úteis tanto para moradores quanto 
+              para visitantes.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/MarcosOliveira404/IlhaBelaBlog" class="btn btn-code" target="_blank" rel="noopener">
+                &lt;/Código&gt; </a>
             </div>
-            <div class="project">
-                <img src="img/04_Projeto.PNG" alt="Projeto 4">
-                <div class="project-infor">
-                    <h3>Avaliação de Cervejas</h3>
-                    <p>Este site foi criado para compartilhar experiências e avaliações sobre diferentes cervejas, destacando suas características únicas. Cada avaliação leva em conta três aspectos principais: aroma, sabor e textura, proporcionando uma análise detalhada da bebida.</p>
-                    <button><a href="https://github.com/MarcosOliveira404/AvaliacaoCerveja" class="col01" target="_blank"> &#60;/Codigo&#62; </a></button>
-                    <button><a href="https://marcosoliveira404.github.io/AvaliacaoCerveja/BrewRanka/index.html" class="col02" target="_blank">Projeto</a></button>
-                </div>
+          </div>
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+        <article class="project">
+          <div class="project-slideshow">
+            <img src="img/04_Projeto_1.PNG" alt="Tela 1 - Gerenciamento de Contas" class="active">
+            <img src="img/04_Projeto_2.PNG">
+            <img src="img/04_Projeto_3.PNG">
+          </div>
+          <div class="project-info">
+            <h3>3D Snake</h3>
+            <p>
+              Um projeto interativo que une game e holograma, trazendo uma cobra em ambiente tridimensional 
+              que se move em tempo real. A experiência combina visual futurista, profundidade 3D e interação 
+              dinâmica, criando a sensação de um holograma vivo que reage aos movimentos e comandos do jogador.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/MarcosOliveira404/3D-Snake" class="btn btn-code" target="_blank" rel="noopener">
+                &lt;/Código&gt; </a>
             </div>
-            <div class="project">
-                <img src="img/05_Projeto.PNG" alt="Projeto 5">
-                <div class="project-infor">
-                    <h3>BugattiTourbillon</h3>
-                    <p>Descubra o Bugatti Tourbillon – Um tributo à engenharia de ponta, luxo extremo e design visionário. No nosso site, você encontra tudo sobre o mais novo hipercarro da Bugatti: detalhes técnicos, imagens exclusivas, curiosidades e o impacto desse modelo revolucionário no mundo automotivo. Prepare-se para explorar a máquina que redefine o conceito de velocidade e elegância.</p>
-                    <button><a href="https://github.com/MarcosOliveira404/BugattiTourbillon/tree/main/Bugatti" class="col01" target="_blank"> &#60;/Codigo&#62; </a></button>
-                    <button><a href="https://marcosoliveira404.github.io/BugattiTourbillon/Bugatti/index.html" class="col02" target="_blank">Projeto</a></button>
-                </div>
+          </div>
+        </article>
+
+
+
+
+
+
+
+
+        <article class="project">
+          <div class="project-slideshow">
+            <img src="img/05_Projeto_1.PNG" alt="Tela 1 - Gerenciamento de Contas" class="active">
+            <img src="img/05_Projeto_2.PNG">
+          </div>
+          <div class="project-info">
+            <h3>Gerenciador de Estoque</h3>
+            <p>
+              Sistema de gerenciamento de estoque desenvolvido para facilitar o cadastro de produtos, controle 
+              de entradas e saídas, registro de vendas e organização do inventário. A plataforma oferece uma 
+              visão clara e prática dos produtos, ajudando no controle financeiro e na tomada de decisões do negócio.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/MarcosOliveira404/Gerenciador_de_Estoque" class="btn btn-code" target="_blank" rel="noopener">
+                &lt;/Código&gt; </a>
             </div>
-            <div class="project">
-                <img src="img/06_Projeto.PNG" alt="Projeto 5">
-                <div class="project-infor">
-                    <h3>Controle Total de Estoque</h3>
-                    <p>Nosso sistema de controle de estoque foi desenvolvido para facilitar a gestão de produtos em pequenas e médias empresas. Com uma interface intuitiva e funcionalidades práticas, você pode cadastrar itens, acompanhar entradas e saídas, visualizar relatórios, e manter seu estoque sempre atualizado. Ideal para comércios, assistências técnicas, lojas físicas ou virtuais. Organize seu negócio, evite perdas e tome decisões com base em dados reais. Desenvolvido em React.</p>
-                    <button><a href="#" class="col03" target="_blank"> &#60;/Arquivos Indisponivel&#62; </a></button>
-                </div>
-            </div>
-            <div class="project">
-                <img src="img/07_Projeto.PNG" alt="Projeto 5">
-                <div class="project-infor">
-                    <h3>Atelier</h3>
-                    <p>Este repositório contém o site do ateliê da minha prima, que oferece serviços de costura, consertos e ajustes de roupas. O site apresenta os serviços disponíveis, os preços, formas de contato e links para as redes sociais.</p>
-                    <button><a href="https://github.com/MarcosOliveira404/Atelie/tree/main/Atelie" class="col01" target="_blank"> &#60;/Codigo&#62; </a></button>
-                    <button><a href="https://marcosoliveira404.github.io/Atelie/Atelie/index.html" class="col02" target="_blank">Projeto</a></button>
-                </div>
-            </div>
-        </div>
+          </div>
+        </article>
+
+
+        
+
+
+      </div>
     </section>
 
-    <section id="programmers">
-        <h2>Linguagens</h2>
-        <div class="programmers-container">
-            <!-- Adicione itens de timeline aqui -->
-            <div class="programmers-item">
-                <h3>HTML</h3>
-                <p>HTML, ou HyperText Markup Language, é a 
-                    linguagem de marcação padrão usada para 
-                    criar páginas web e aplicativos web. Ela 
-                    estrutura o conteúdo na web e permite a 
-                    inclusão de textos, imagens, links, vídeos, 
-                    e outros tipos de mídia.</p>
-            </div>
-            <div class="programmers-item">
-                <h3>CSS</h3>
-                <p>CSS, ou Cascading Style Sheets, é uma linguagem 
-                    de estilo usada para descrever a apresentação 
-                    de um documento HTML.</p>
-            </div>
-            <div class="programmers-item">
-                <h3>JS</h3>
-                <p>JavaScript é uma linguagem de programação amplamente 
-                    utilizada para desenvolvimento web, que permite a 
-                    criação de conteúdo dinâmico e interativo em páginas 
-                    web. Originalmente desenvolvida para ser executada 
-                    no lado do cliente (navegador), JavaScript é agora 
-                    também usada no lado do servidor através de ambientes como Node.js.</p>
-            </div>
-            <div class="programmers-item">
-                <h3>PHP</h3>
-                <p>PHP é uma linguagem de script de código aberto 
-                    amplamente utilizada para desenvolvimento web, 
-                    especialmente para a criação de páginas dinâmicas 
-                    e interativas. Originalmente criado em 1994 por 
-                    Rasmus Lerdorf, o PHP é executado no servidor, 
-                    o que significa que o código é interpretado no 
-                    servidor web e o resultado é enviado ao navegador 
-                    do cliente como HTML.</p>
-            </div>
-            <div class="programmers-item">
-                <h3>MySQL</h3>
-                <p>MySQL é um sistema de gerenciamento de banco de 
-                    dados relacional (RDBMS) de código aberto, 
-                    amplamente utilizado para armazenar, organizar 
-                    e gerenciar grandes quantidades de dados. 
-                    Desenvolvido inicialmente pela empresa sueca 
-                    MySQL AB e agora mantido pela Oracle Corporation, 
-                    o MySQL é uma das escolhas mais populares para 
-                    aplicações web e sistemas empresariais.</p>
-            </div>
-            <div class="programmers-item">
-                <h3>React</h3>
-                <p>O React.js é uma biblioteca JavaScript de código 
-                    aberto, desenvolvida pelo Facebook (atual Meta), 
-                    usada para criar interfaces de usuário (UI) de 
-                    forma eficiente e reativa. Ele é amplamente utilizado 
-                    no desenvolvimento de aplicações web e mobile devido 
-                    à sua modularidade e desempenho.</p>
-            </div>
-
-
-            <!-- Continue adicionando mais itens conforme necessário -->
+    <!-- LINGUAGENS / SKILLS -->
+    <section id="programmers" class="container section-skills">
+      <h2>Linguagens</h2>
+      <div class="skills-grid">
+        <div class="skill programmers-item">
+          <h3>HTML</h3>
+          <p>HTML, ou HyperText Markup Language, é a
+            linguagem de marcação padrão usada para
+            criar páginas web e aplicativos web. Ela
+            estrutura o conteúdo na web e permite a
+            inclusão de textos, imagens, links, vídeos,
+            e outros tipos de mídia.</p>
         </div>
+        <div class="skill programmers-item">
+          <h3>CSS</h3>
+          <p>CSS, ou Cascading Style Sheets, é uma linguagem
+            de estilo usada para descrever a apresentação
+            de um documento HTML.</p>
+        </div>
+        <div class="skill programmers-item">
+          <h3>JS</h3>
+          <p>JavaScript é uma linguagem de programação amplamente
+            utilizada para desenvolvimento web, que permite a
+            criação de conteúdo dinâmico e interativo em páginas
+            web. Originalmente desenvolvida para ser executada
+            no lado do cliente (navegador), JavaScript é agora
+            também usada no lado do servidor através de ambientes como Node.js.</p>
+        </div>
+        <div class="skill programmers-item">
+          <h3>PHP</h3>
+          <p>PHP é uma linguagem de script de código aberto
+            amplamente utilizada para desenvolvimento web,
+            especialmente para a criação de páginas dinâmicas
+            e interativas. Originalmente criado em 1994 por
+            Rasmus Lerdorf, o PHP é executado no servidor,
+            o que significa que o código é interpretado no
+            servidor web e o resultado é enviado ao navegador
+            do cliente como HTML.</p>
+        </div>
+        <div class="skill programmers-item">
+          <h3>MySQL</h3>
+          <p>MySQL é um sistema de gerenciamento de banco de
+            dados relacional (RDBMS) de código aberto,
+            amplamente utilizado para armazenar, organizar
+            e gerenciar grandes quantidades de dados.
+            Desenvolvido inicialmente pela empresa sueca
+            MySQL AB e agora mantido pela Oracle Corporation,
+            o MySQL é uma das escolhas mais populares para
+            aplicações web e sistemas empresariais.</p>
+        </div>
+        <div class="skill programmers-item">
+          <h3>React</h3>
+          <p>O React.js é uma biblioteca JavaScript de código
+            aberto, desenvolvida pelo Facebook (atual Meta),
+            usada para criar interfaces de usuário (UI) de
+            forma eficiente e reativa. Ele é amplamente utilizado
+            no desenvolvimento de aplicações web e mobile devido
+            à sua modularidade e desempenho.</p>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>&#91; &reg; 2025 <a href="https://www.instagram.com/marcosoliveirazyx?utm_source=qr&igsh=d3piejdlOGg2NmNh " target="_blank"> 
-                @marcosoliveirazyx
-        </a>&#93;</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — <a href="https://www.instagram.com/marcosoliveirazyx" target="_blank"
+          rel="noopener">@marcosoliveirazyx</a></p>
+    </div>
+  </footer>
 
-    <script src="./js/scripts.js"></script>
+  <script src="js/scripts2.js"></script>
 </body>
+
 </html>

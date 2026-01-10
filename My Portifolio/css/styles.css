@@ -1,23 +1,25 @@
-*{
+@charset "utf-8";
+
+/* ============================================================
+   🌌 PORTFÓLIO MARCOS - STYLES.CSS UNIFICADO
+   Contém os estilos combinados de:
+   - styles.css
+   - buttonAnimation.css
+   - mediaQuery.css
+   - Foto.css
+   ============================================================ */
+
+/* ------------------------------
+   🔹 CONFIGURAÇÕES GERAIS
+--------------------------------*/
+* {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-#rocket {
-    position: fixed;
-    width: 80px; /* Ajuste conforme necessário */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    pointer-events: none; /* Não interfere na navegação */
-}
-
-
-
-
-:root{
+:root {
     --colorBase: #0b0b0b;
     --colorBase02: #d1d1d1;
     --colorLink01: #2dd21d;
@@ -25,73 +27,80 @@
     --colorLink03: #ff0000;
     --Font: Global;
     --FontItalic: Global-Italic;
-} 
+}
 
-
-
-
+/* ------------------------------
+   🔹 FONTES PERSONALIZADAS
+--------------------------------*/
 @font-face {
     font-family: Global;
-    /*    truetype -> ttf            opentype -> otf    */
-    src: url('../font/Terminus.ttf') format('truetype'); 
+    src: url('../font/Terminus.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: Global-Italic;
-    /*    truetype -> ttf            opentype -> otf    */
-    src: url('../font/Terminus-Italic.ttf') format('truetype'); 
+    src: url('../font/Terminus-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-
-
+/* ------------------------------
+   🔹 ELEMENTOS GERAIS
+--------------------------------*/
 body {
     margin: 0;
     font-size: 1.1em;
+    background-color: #fff;
+    color: #000;
 }
 
+h2 {
+    font-family: var(--Font);
+    font-size: 2.5em;
+    padding-bottom: 25px;
+}
+
+/* ------------------------------
+   🚀 ANIMAÇÃO FOGUETE
+--------------------------------*/
+#rocket {
+    position: fixed;
+    width: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* ------------------------------
+   🧭 CABEÇALHO / NAV
+--------------------------------*/
 header {
     background-color: var(--colorBase);
     color: white;
     padding: 15px 0;
 }
 
-h2{
-    font-family: var(--Font);
-    font-size: 2.5em;
-    padding-bottom: 25px;
-}
-
-
-
-/*  --- SOBRE MIN ---  */
-
 header > nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
 }
 
 header > nav > div > img {
-    max-width: 100%;
-    /*height: auto;*/
     height: 100px;
     border-radius: 50%;
     margin: 20px;
+    max-width: 100%;
 }
 
-
-
-
-
-/*  --- CABEÇALHO ---  */
+/* Links do menu */
 nav > ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     text-align: center;
 }
 
@@ -106,25 +115,16 @@ nav > ul > li > a {
     font-weight: bold;
 }
 
-nav > ul > li > a:hover{
-    color: var(--colorLink02) ;
+nav > ul > li > a:hover {
+    color: var(--colorLink02);
 }
 
-
-
-
-
-
-
-
+/* ------------------------------
+   👤 SEÇÃO SOBRE MIM
+--------------------------------*/
 section {
     padding: 50px 20px;
     text-align: center;
-}
-
-.sobre-container > .sobre-text > h1 > span{
-    color: var(--colorLink02);
-    font-family: var(--Font);
 }
 
 .sobre-container {
@@ -135,62 +135,138 @@ section {
 }
 
 .sobre-container > img {
-    max-width: 100%;
-    /*height: auto;*/
     height: 350px;
     border-radius: 50%;
     margin: 20px;
+    max-width: 100%;
 }
 
 .sobre-container > .sobre-text {
     max-width: 600px;
 }
 
-
-.sobre-text > h1{
+.sobre-container > .sobre-text > h1 {
     font-size: 2em;
     font-family: var(--Font);
 }
 
-.sobre-text > p{
+.sobre-container > .sobre-text > h1 > span {
+    color: var(--colorLink02);
+}
+
+.sobre-container > .sobre-text > p {
     padding: 10px;
     font-size: 1.1em;
 }
 
-.sobre-text > p > span{
+.sobre-container > .sobre-text > p > span {
     font-weight: bolder;
 }
 
-.sobre-text > ul {
+/* ------------------------------
+   ✨ BOTÕES ANIMADOS (LinkedIn / GitHub)
+--------------------------------*/
+#lin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
 }
 
-.sobre-text> ul > li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.sobre-text > ul > li > a {
-    display: inline-block;
-    padding: 5px;
-    margin: 5px;
-    color: rgb(12, 12, 12);
+#lin > li > a {
+    position: relative;
+    background: #000;
+    color: #000;
     text-decoration: none;
-    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
 }
 
-.sobre-text > ul > li > a:hover{
-    background-color: var(--colorBase);
-    border-radius: 10px;
-    color: var(--colorLink);
+#lin > li > a:hover {
+    letter-spacing: 0.25em;
+    background: var(--color);
+    color: var(--color);
+    box-shadow: 0 0 35px var(--color);
 }
 
+#lin > li > a::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #fff;
+}
 
+#lin > li > a span {
+    position: relative;
+    z-index: 1;
+}
 
-/*  --- AREA DE PROJETOS ---  */
+#lin > li > a i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+#lin > li > a i::before,
+#lin > li > a i::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--color);
+    background: #000;
+    transition: 0.5s;
+}
+
+#lin > li > a i::before {
+    top: -3.5px;
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+#lin > li > a:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+#lin > li > a i::after {
+    bottom: -3.5px;
+    left: 20%;
+}
+
+#lin > li > a:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+
+/* ------------------------------
+   🌊 FOTO FLUTUANTE
+--------------------------------*/
+.float-element {
+    height: 350px;
+    margin: 20px;
+    border-radius: 50%;
+    display: block;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0.5%, -0.5%) translateY(0);
+    }
+    50% {
+        transform: translate(-0.5%, -0.5%) translateY(-20px);
+    }
+}
+
+/* ------------------------------
+   🧱 SEÇÃO PROJETOS
+--------------------------------*/
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -204,6 +280,14 @@ section {
     border-radius: 10px;
     width: 45%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.project.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project > img {
@@ -214,10 +298,6 @@ section {
 
 .project-infor {
     text-align: left;
-}
-
-.project-infor > h3 {
-    margin-top: 0;
 }
 
 .project-infor > p {
@@ -234,40 +314,24 @@ section {
     cursor: pointer;
 }
 
-.project-infor > button > a{
+.project-infor > button > a {
     color: #f4f4f4;
     text-decoration: none;
 }
 
-.project-infor > button > a.col01:hover{
+.project-infor > button > a.col01:hover {
     color: var(--colorLink01);
 }
-.project-infor > button > a.col02:hover{
+.project-infor > button > a.col02:hover {
     color: var(--colorLink02);
 }
-.project-infor > button > a.col03:hover{
+.project-infor > button > a.col03:hover {
     color: var(--colorLink03);
 }
 
-
-.project {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.project.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-
-
-
-
-
-/*  --- LINGUAGENS ---  */
+/* ------------------------------
+   💻 SEÇÃO LINGUAGENS
+--------------------------------*/
 .programmers-container {
     display: flex;
     flex-wrap: wrap;
@@ -281,13 +345,6 @@ section {
     border-radius: 10px;
     width: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.programmers-item > p{
-    text-align: justify;
-}
-
-.programmers-item {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -298,9 +355,13 @@ section {
     transform: translateY(0);
 }
 
+.programmers-item > p {
+    text-align: justify;
+}
 
-/*  --- RODAPE ---  */
-
+/* ------------------------------
+   ⚙️ RODAPÉ
+--------------------------------*/
 footer {
     background-color: var(--colorBase);
     color: white;
@@ -308,12 +369,60 @@ footer {
     padding: 20px 0;
 }
 
-footer > p > a{
+footer > p > a {
     color: #f4f4f4;
     text-decoration: none;
 }
 
-footer > p > a:hover{
+footer > p > a:hover {
     color: var(--colorLink01);
     text-decoration: underline;
+}
+
+/* ------------------------------
+   📱 MEDIA QUERIES
+--------------------------------*/
+@media print {
+    html {
+        font-size: 1.4em;
+    }
+    header, ul#lin {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 768px) {
+    header {
+        width: 105%;
+    }
+    .sobre-text > h1 {
+        font-size: 1.6em;
+    }
+    #lin {
+        gap: 15px;
+    }
+    .project {
+        width: 85%;
+    }
+    .programmers-item {
+        width: 85%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .project {
+        width: 35%;
+    }
+    .programmers-item {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .project {
+        width: 35%;
+    }
+    .programmers-item {
+        width: 30%;
+    }
 }
